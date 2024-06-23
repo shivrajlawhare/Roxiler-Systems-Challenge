@@ -7,7 +7,7 @@ const TransactionsTable = ({ month = '03', search, page, setPage }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get('http://localhost:5000/api/transactions', {
+            const response = await axios.get('https://roxiler-systems-challenge-server.onrender.com/api/transactions', {
                 params: { month, search, page, perPage: 10 }
             });
             setTransactions(response.data.transactions);

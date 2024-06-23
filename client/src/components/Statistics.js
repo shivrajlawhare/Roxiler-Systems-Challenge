@@ -6,7 +6,7 @@ const Statistics = ({ month = '03' }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get('http://localhost:5000/api/transactions/statistics', { params: { month } });
+            const response = await axios.get('https://roxiler-systems-challenge-server.onrender.com/api/transactions/statistics', { params: { month } });
             setStats(response.data);
         };
 

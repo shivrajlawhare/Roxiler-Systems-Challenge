@@ -9,7 +9,7 @@ const TransactionsPieChart = ({ month = '03' }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get('http://localhost:5000/api/transactions/piechart', { params: { month } });
+            const response = await axios.get('https://roxiler-systems-challenge-server.onrender.com/api/transactions/piechart', { params: { month } });
             setData(response.data);
         };
 
